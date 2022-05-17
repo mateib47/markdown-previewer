@@ -1,11 +1,15 @@
-import { marked } from 'marked';
-import './app.scss';
+//import { marked } from 'marked';
+import "./app.scss";
+import Main from "./components/Main";
+import Topbar from "./components/Topbar/Topbar";
 
 function App() {
   return (
     <div className="app">
-      <h1>Markdown Previewer</h1>
-
+      <Topbar />
+      <div className="section">
+        <Main />
+      </div>
     </div>
   );
 }
