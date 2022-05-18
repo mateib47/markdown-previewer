@@ -1,10 +1,15 @@
-import './main.scss'
+import './main.scss';
+import Editor from './Editor/Editor';
+import Preview from './Preview/Preview';
+import { useState } from 'react';
 
 const Main = () => {
+  const [text, setText] = useState("")
+
   return (
     <div className='main'>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+      <Editor setText={setText} />
+      <Preview text={text} />
     </div>
   )
 }
