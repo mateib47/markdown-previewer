@@ -1,4 +1,6 @@
 .topbar{
+    display: flex;
+    align-items: center;
     overflow: hidden;
     background-color: black;
     color: white;
@@ -9,8 +11,6 @@
     left:0;
 
     .wrapper{
-        display: flex;
-        align-items: center;
         padding: 10px 30px;
         margin-left: 30px;
     }

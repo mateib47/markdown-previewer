@@ -1,4 +1,3 @@
-//import { marked } from 'marked';
 import "./app.scss";
 import Main from "./components/Main";
 import Topbar from "./components/Topbar/Topbar";

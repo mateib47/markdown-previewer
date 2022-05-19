@@ -1,0 +1,12 @@
+.preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .textBox{
+        border-color: black;
+        width: 30vw;
+        height: 60vh;
+        border-style: groove;
+    }
+}
