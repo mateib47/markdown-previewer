@@ -1,7 +1,9 @@
 import "./preview.scss";
 import { marked } from "marked";
+//sanitize input
 
 const Preview = ({ text }) => {
+    console.log(marked.parse(text));
   return (
     <div className="preview">
       <div className="top">Preview</div>

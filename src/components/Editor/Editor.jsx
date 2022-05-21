@@ -3,49 +3,17 @@ import { useEffect } from "react";
 
 const Editor = ({ setText }) => {
   const initialText = `# Welcome to React Markdown Previewer!
+  ## Visualise here your beautiful markdown
+  ### This project is part of [freeCodeCamp](https://www.freecodecamp.org/learn/) Curriculum!
 
-## This is a sub-heading...
-### And here's some other cool stuff:
-    
-    Heres some code, \`<div></div>\`, between 2 backticks.
-    
-    \`\`\`
-    // this is multi-line code:
-    
-    function anotherExample(firstLine, lastLine) {
-      if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-        return multiLineCode;
-      }
-    }
-    \`\`\`
-    
-    You can also make text **bold**... whoa!
-    Or _italic_.
-    Or... wait for it... \*\*_both!_\*\*
-    And feel free to go crazy ~~crossing stuff out~~.
-    
-    There's also [links](https://www.freecodecamp.org), and
-    > Block Quotes!
-    
-    And if you want to get really crazy, even tables:
-    
-    Wild Header | Crazy Header | Another Header?
-    ------------ | ------------- | -------------
-    Your content can | be here, and it | can be here....
-    And here. | Okay. | I think we get it.
-    
-    - And of course there are lists.
-      - Some are bulleted.
-         - With different indentation levels.
-            - That look like this.
-    
-    
-    1. And there are numbered lists too.
-    1. Use just 1s if you want!
-    1. And last but not least, let's not forget embedded images:
-    
-    ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
-    `;
+  Here is a function that calculates the length of a list in haskell:
+  \`\`\`
+    myLen :: [a] -> Int
+    myLen [] = 0
+    myLen (x:xs) = 1+ myLen xs
+\`\`\`
+  
+  `;
   const handleChange = (event) => {
     setText(event.target.value);
   };
@@ -56,8 +24,7 @@ const Editor = ({ setText }) => {
   return (
     <div className="editor">
       <div className="top">Editor</div>
-      <textarea name="" id="editor" cols="70" rows="27" onChange={handleChange}>
-        {initialText}
+      <textarea name="" id="editor" cols="60" rows="27" onChange={handleChange} defaultValue={initialText}>
       </textarea>
     </div>
   );

@@ -8,6 +8,18 @@
 
   textarea {
     background-color: #bebebe;
+    width: 100%;
+    height: auto;
+
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
   }
 
   .top {
