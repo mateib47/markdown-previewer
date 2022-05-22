@@ -3,7 +3,9 @@ import { marked } from "marked";
 //sanitize input
 
 const Preview = ({ text }) => {
-    console.log(marked.parse(text));
+  marked.setOptions({
+    breaks: true,
+  });
   return (
     <div className="preview">
       <div className="top">Preview</div>
@@ -12,7 +14,6 @@ const Preview = ({ text }) => {
         id="preview"
         dangerouslySetInnerHTML={{ __html: marked.parse(text) }}
       ></div>
-      {/* <textarea name="" id="preview" cols="30" rows="10" ></textarea> */}
     </div>
   );
 };

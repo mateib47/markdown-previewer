@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Main = () => {
   const [text, setText] = useState("");
+  
 
   return (
     <div className="main">
