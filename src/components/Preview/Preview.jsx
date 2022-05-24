@@ -8,7 +8,10 @@ const Preview = ({ text }) => {
   });
   return (
     <div className="preview">
-      <div className="top">Preview</div>
+      <div className="top">
+        <i class="fa fa-file-code-o"></i>
+        <h1>Preview</h1>
+      </div>
       <div
         className="textBox"
         id="preview"

@@ -6,12 +6,14 @@
   flex-direction: column;
   border-radius: 10px;
   margin: 20px 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 
   textarea {
     background-color: #bebebe;
     width: 100%;
     height: auto;
+    // padding-right: 30px;
 
     border: none;
     overflow: auto;
@@ -32,5 +34,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
+    font-size: 15px;
+
+    i{
+        font-size: 30px;
+        margin-right: 7px;
+    }
   }
 }
