@@ -1,54 +1,102 @@
-.preview{
+@import "../../global.scss";
+
+.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  max-height: 75vh;
+  margin: 40px 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  @include mobile {
+    margin: 30px 20px;
+    box-shadow: none;
+  }
+
+  .top {
+    overflow: hidden;
+    background-color: #8c6c5a;
+    width: 100%;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
+    font-size: 15px;
+    @include mobile {
+      height: 65px;
+    }
+    i {
+      font-size: 25px;
+      margin-right: 7px;
+    }
+  }
+
+  .wrapper {
+    background-color: #f6f6f6;
+
+    width: 100%;
+    height: auto;
+    display: flex;
     flex-direction: column;
-    background-color: #bebebe;
-    border-radius: 10px;
-    max-height: 80vh;
-    margin: 20px 40px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: flex-end;
 
+    .textBox {
+      margin-top: 15px;
+      color: inherit;
+      width: 97%;
+      height: auto;
+      font-family: "Oooh Baby", cursive;
+      line-height: 25px;
 
-    .top{
-        overflow: hidden;
-        background-color: #808080;
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600;
+      h1 {
+        border-bottom: 1px solid #403d3d;
+        line-height: 45px;
+      }
+      h2 {
+        line-height: 35px;
+      }
+      h3 {
+        line-height: 35px;
+      }
+
+      pre {
+        background: #e8ded7;
+        border: 1px solid #ddd;
+        border-left: 5px solid #8c6c5a;
+        color: #666;
+        page-break-inside: avoid;
+        font-family: monospace;
         font-size: 15px;
-
-        i{
-            font-size: 25px;
-            margin-right: 7px;
-        }
-    }
-
-    .textBox{
-        width: 100%;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        width: 60%;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+      }
+      code {
+        background: #e8ded7;
+        margin: 0 8px;
+      }
+      img {
+        max-width: 100%;
         height: auto;
+      }
 
-        
-
-        pre {
-            background: hsl(159, 17%, 80%);
-            border: 1px solid #ddd;
-            border-left: 5px solid #4E9A7F;
-            color: #666;
-            page-break-inside: avoid;
-            font-family: monospace;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 1.6em;
-            width: 60%;
-            max-width: 100%;
-            overflow: auto;
-            padding: 1em 1.5em;
-            display: block;
-            word-wrap: break-word;
-        }
+      blockquote {
+        border-left: 10px solid #ccc;
+        margin: 0.7em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+      }
     }
+  }
 }

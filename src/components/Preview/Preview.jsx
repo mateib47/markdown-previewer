@@ -9,14 +9,16 @@ const Preview = ({ text }) => {
   return (
     <div className="preview">
       <div className="top">
-        <i class="fa fa-file-code-o"></i>
+        <i className="fa fa-file-code-o"></i>
         <h1>Preview</h1>
       </div>
-      <div
-        className="textBox"
-        id="preview"
-        dangerouslySetInnerHTML={{ __html: marked.parse(text) }}
-      ></div>
+      <div className="wrapper">
+        <div
+          className="textBox"
+          id="preview"
+          dangerouslySetInnerHTML={{ __html: marked.parse(text) }}
+        ></div>
+      </div>
     </div>
   );
 };

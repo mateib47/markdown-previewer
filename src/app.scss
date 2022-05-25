@@ -1,16 +1,15 @@
-.app{
-    height: 100vh;
-    background-color: #f6f6f6;
+.app {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background-color: #bba38e;
 
-
-    .section{
-        height: calc(100vh - 70px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
-        top: 70px;
-    }
-    
+  .section {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 70px;
+  }
 }

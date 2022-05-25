@@ -7,26 +7,28 @@ const Editor = ({ setText }) => {
   ## Visualise here your beautiful markdown
   ### This project is part of [freeCodeCamp](https://www.freecodecamp.org/learn/) Curriculum!
 
+
+
   **Haskell** is my favourite programming language (_sarcasm_)
   - It is
-    -Functional
-    -Its short and concise
-    -It has fun stuff like functors
-    -You can do parsing with parsec
-
+        -Functional
+        -Its short and concise
+        -It has fun stuff like functors
+        -You can do parsing with parsec
+    
   Here is a function that calculates the length of a list in haskell:
 \`\`\`
-    myLen :: [a] -> Int
+   myLen :: [a] -> Int
     myLen [] = 0
     myLen (x:xs) = 1+ myLen xs
 \`\`\`
 
  You can use \`import Test.QuickCheck\` to import the haskell testing library.
 
- Learn Haskell
- >There is no reason to not learn it
+ Why learn Haskell
+ >Functional languages like it are getting more popular among big companies
 
- ![Haskell Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Haskell-Logo.svg/320px-Haskell-Logo.svg.png)
+ ![Haskell Logo](https://miro.medium.com/max/794/1*WafoBJVtOQKSRljQcOcEsw.png)
 
   
   `;
@@ -41,17 +43,29 @@ const Editor = ({ setText }) => {
   return (
     <div className="editor">
       <div className="top">
-        <i class="fa fa-edit"></i>
+        <i className="fa fa-edit"></i>
         <h1>Editor</h1>
       </div>
-      <textarea
-        name=""
-        id="editor"
-        cols="60"
-        rows="27"
-        onChange={handleChange}
-        defaultValue={initialText}
-      ></textarea>
+      <div className="wrapper">
+        <textarea
+          name=""
+          id="editor"
+          cols="60"
+          rows="37"
+          onChange={handleChange}
+          defaultValue={initialText}
+        ></textarea>
+        <button
+          title="Copy to clipboard!"
+          onClick={() => {
+            navigator.clipboard.writeText(
+              document.querySelector("#editor").value
+            );
+          }}
+        >
+          <i class="fa fa-clipboard"></i>
+        </button>
+      </div>
     </div>
   );
 };
